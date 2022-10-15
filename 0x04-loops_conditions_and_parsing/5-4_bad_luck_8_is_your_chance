@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# While loop to display "Best School" 10 times
+# On the 4th iteration, output "Bad luck"
+# On the 8th iteration, output "Good luch"
+# Utilise a while loop with if, elif, and else.
+
+counter=0
+
+while [ $counter -lt 10 ]; do
+	if [ $counter == 3 ]
+	then
+		echo "bad luck"
+	elif [ $counter == 7 ]
+	then
+		echo "good luck"
+	else
+		echo "Best School"
+	fi
+	counter=$(( counter + 1))
+done
