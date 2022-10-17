@@ -7,6 +7,6 @@
 #You cannot use pgrep
 #The third line of your script must be # shellcheck disable=SC2009
 
-ps -auxf | pgrep bash
+ps -auxf | grep bash
 
 shellcheck disable=SC2009
