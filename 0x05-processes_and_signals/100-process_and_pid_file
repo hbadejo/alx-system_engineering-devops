@@ -8,12 +8,10 @@
 #Displays Y U no love me?! when receiving a SIGINT signal
 #Deletes the file /var/run/myscript.pid and terminates itself when receiving a SIGQUIT or SIGTERM signal
 
-filLoc="/var/run/myscript.pid"
-mkdir filLoc
-echo '$$' > filLoc
+echo '$$' >  /var/run/myscript.pid
 
 clearOut() {
-	rm filLoc
+	rm /var/run/myscript.pid
 	exit
 }
 
