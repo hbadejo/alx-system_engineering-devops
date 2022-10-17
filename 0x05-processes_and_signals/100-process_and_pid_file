@@ -10,12 +10,17 @@
 
 filLoc="/var/run/myscript.pid"
 mkdir filLoc
-echo $$ >> filLoc
+echo '$$' > filLoc
+
+clearOut() {
+	rm filLoc
+	exit
+}
 
 while true; do
 	echo "To infinity and beyond"
 	sleep 2
-	trap 'echo "I hate the kill command" && terminator' SIGTERM
+	trap 'echo "I hate the kill command" && clearOut' SIGTERM
 	trap 'echo "Y U no love me?"' SIGINT
-	trap 'terminator' SIGQUIT
+	trap 'clearOut' SIGQUIT
 done
