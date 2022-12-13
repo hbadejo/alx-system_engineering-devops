@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Connects to my ALX Ubuntu server.
+ssh -i ~/.ssh/id_rsa ubuntu@54.236.53.121
