@@ -1,7 +1,7 @@
 # Web server
 
 I became familiar with web servers during this project and started utilizing one.
-ALX gave me with a personal server. I learned how to transmit files to my server using'scp' and Fabric. I also finished the server's fundamental configuration using Nginx. 
+ALX gave me with a personal server. I learned how to transmit files to my server using'scp'. I also finished the server's fundamental configuration using Nginx. 
 
 ## Tasks :page_with_curl:
 
