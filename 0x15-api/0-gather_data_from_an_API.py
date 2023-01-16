@@ -4,6 +4,9 @@ import requests
 import sys
 
 if __name__ == "__main__":
+    """
+    Variable for links
+    """
     url = "https://jsonplaceholder.typicode.com/"
     emp = requests.get(url + "users/{}".format(sys.argv[1])).json()
     todo = requests.get(url + "todos", uid={"userId": sys.argv[1]}).json()
