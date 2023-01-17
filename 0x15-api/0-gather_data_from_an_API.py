@@ -21,7 +21,7 @@ def emp_todo():
 
     completed = [data.get("title")
                  for data in todo if data.get("completed") is True]
-    print("Employee {} is done with tasks({}/{})".format(emp.get("name"),
+    print("Employee {} is done with tasks({}/{}):".format(emp.get("name"),
           len(completed), len(todo)))
     [print("\t {}".format(com_title)) for com_title in completed]
 
