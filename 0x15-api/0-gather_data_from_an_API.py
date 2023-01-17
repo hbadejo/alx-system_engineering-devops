@@ -6,13 +6,13 @@ import sys
 
 def emp_todo():
     """
-    Python script that, using this REST API, 
-    for a given employee ID, 
+    Python script that, using this REST API,
+    for a given employee ID,
     returns information about his/her TODO list progress.
 
     Requirements:
         You must use urllib or requests module
-        The script must accept an integer as a parameter, 
+        The script must accept an integer as a parameter,
         which is the employee ID
     """
     url = "https://jsonplaceholder.typicode.com/"
@@ -28,4 +28,3 @@ def emp_todo():
 
 if __name__ == "__main__":
     emp_todo()
-
