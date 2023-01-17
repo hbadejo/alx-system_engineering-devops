@@ -11,22 +11,22 @@ def ex_emp_todo_csv():
 
     Requirements:
         Records all tasks that are owned by this employee
-        Format must be: "USER_ID","USERNAME","TASK_COMPLETED_STATUS","TASK_TITLE"
+        Format must be: "USER_ID","USERNAME","TASK_COMPLETED_STATUS",
+                        "TASK_TITLE"
         File name must be: USER_ID.csv
     """
-
 
     url = "https://jsonplaceholder.typicode.com/"
     emp = requests.get(url + "users/{}".format(sys.argv[1])).json()
     todo = requests.get(url + "todos", params={"userId": sys.argv[1]}).json()
     user_id = sys.argv[1]
-
+    username = emp.get("username")
 
     with open(f"{user_id}.csv", "w", newline="") as csvfile:
         pen = csv.writer(csvfile)
         [pen.writerow(
-            [user_id, emp.get("username"), data.get("complete"), data.get("title")]
-            ) for data in todo]
+            [user_id, username, data.get("complete"), data.get("title")]
+        ) for data in todo]
 
 
 if __name__ == "__main__":

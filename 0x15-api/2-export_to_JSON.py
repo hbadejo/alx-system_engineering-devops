@@ -14,13 +14,12 @@ def ex_emp_todo_json():
     user_id = sys.argv[1]
     username = emp.get("username")
 
-
     with open(f"{user_id}.json", "w") as jsonfile:
         json.dump({user_id: [{
             "task": data.get("title"),
             "completed": data.get("completed"),
             "username": username
-            } for data in todo]}, jsonfile)
+        } for data in todo]}, jsonfile)
 
 
 if __name__ == "__main__":
