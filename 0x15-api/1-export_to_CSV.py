@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Export to-do list info for a given employee to a CSV file."""
+"""Export to-do list information for a given employee to a CSV file."""
+
 import csv
 import requests
 import sys
@@ -11,8 +12,8 @@ def ex_emp_todo_csv():
 
     Requirements:
         Records all tasks that are owned by this employee
-    Format must be: "USER_ID","USERNAME","TASK_COMPLETED_STATUS","TASK_TITLE"
-    File name must be: USER_ID.csv
+        Format must be: "USER_ID","USERNAME","TASK_COMPLETED_STATUS","TASK_TITLE"
+        File name must be: USER_ID.csv
     """
 
 
